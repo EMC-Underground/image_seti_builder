@@ -1,0 +1,9 @@
+sudo: required
+language: python
+services:
+- docker
+
+script:
+- docker build -t bsoper/image_seti_builder .
+deploy:
+  script: docker push bsoper/image_seti_builder
