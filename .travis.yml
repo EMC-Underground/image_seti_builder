@@ -1,9 +1,10 @@
 sudo: required
 language: python
 services:
-- docker
+  - docker
 
+before_install:
+  - echo $DOCKER_PASSWORD | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t nctiggy/image_seti_builder .
 script:
-- docker build -t bsoper/image_seti_builder .
-deploy:
-  script: docker push bsoper/image_seti_builder
+  - docker push nctiggy/image_seti_builder
