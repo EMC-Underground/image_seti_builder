@@ -5,6 +5,7 @@ MAINTAINER Brad Soper <bradley.soper@dell.com>
 RUN apk --no-cache add git \
             python3 \
             curl \
+            bash \
             jq && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
