@@ -6,6 +6,7 @@ RUN apk --no-cache add git \
             python3 \
             curl \
             bash \
+            vault \
             jq && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
