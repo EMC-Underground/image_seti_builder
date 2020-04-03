@@ -15,8 +15,7 @@ RUN apk --no-cache add git \
             wheel \
             yq \
             jinja2 && \
-    curl https://github.com/concourse/concourse/releases/download/v5.8.0/fly-5\
-    .8.0-linux-amd64.tgz -o fly.tgz && \
+    curl https://github.com/concourse/concourse/releases/download/v5.8.0/fly-5.8.0-linux-amd64.tgz -o fly.tgz && \
     tar -xvzf fly.tgz && \
     rm fly.tgz && \
     chmod +x fly && \
