@@ -20,4 +20,7 @@ RUN apk --no-cache add git \
     tar xvzf fly-6.3.0-linux-amd64.tgz && \
     rm fly-6.3.0-linux-amd64.tgz && \
     chmod +x fly && \
-    mv fly /usr/local/bin
+    mv fly /usr/local/bin && \
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    chmod +x kubectl && \
+    mv kubectl /usr/local/bin
