@@ -1,4 +1,4 @@
-FROM alpinelinux/docker-cli
+FROM yobasystems/alpine-docker:dind
 
 MAINTAINER Brad Soper <bradley.soper@dell.com>
 
